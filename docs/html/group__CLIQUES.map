@@ -1,4 +1,4 @@
-<map id="Cliques" name="Cliques">
-<area shape="rect" id="Node000001" title="Compute the maximal cliques of a stream." alt="" coords="154,5,223,33"/>
-<area shape="rect" id="Node000002" href="$group__EXTERNAL__API.html" title=" " alt="" coords="5,5,106,33"/>
+<map id="Compute maximal cliques in a stream." name="Compute maximal cliques in a stream.">
+<area shape="rect" id="Node000001" title=" " alt="" coords="258,5,450,50"/>
+<area shape="rect" id="Node000002" href="$group__EXTERNAL__API.html" title=" " alt="" coords="5,14,210,42"/>
 </map>
