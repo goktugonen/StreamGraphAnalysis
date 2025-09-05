@@ -72,6 +72,14 @@ You can find examples of how to use the library in the examples/ directory.
 You can find the documentation in the docs/ directory, which is generated using Doxygen, which you can generate using the make docs -B command.
 You can find utility programs in the utilities/ directory, which you can compile using the make utilities -B command.
 
+Depoyu klonlayın ve ardından kütüphaneyi derlemek için libsga yap.
+Kütüphaneyi kullanmak için projenize bağlanabileceğiniz bir Libsga.a dosyasına sahip olacaksınız.
+Kütüphaneyi kullanmak için projenize ekleyebileceğiniz ana dizinde bir başlık dosyası olan `StreamGraphAnalysis.h` var.
+
+Kütüphanenin örneklerde/ dizinde nasıl kullanılacağına dair örnekler bulabilirsiniz.
+Belgeleri, DOCS -B komutunu kullanarak oluşturabileceğiniz doksijen kullanılarak oluşturulan Dokümanlar/ Dizin'de bulabilirsiniz.
+Yardımcı Programlar/ Dizin'de, Make Utilities -b komutunu kullanarak derleyebileceğiniz yardımcı programlar bulabilirsiniz.
+
 ## Data format
 
 You have two ways to format your data, either in the external format or in the internal format.

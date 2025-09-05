@@ -1,4 +1,4 @@
-CC ?= gcc
+CC=gcc
 DEBUG_FLAGS = -g -O0 -fsanitize=address -fsanitize=leak -fno-omit-frame-pointer -fsanitize=undefined
 RELEASE_FLAGS = -O4 -march=native -flto -DNDEBUG
 BENCHMARK_FLAGS = -O3 -g
