@@ -4,25 +4,28 @@
  */
 
 #include "../StreamGraphAnalysis.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-int main() {
-	// Load the stream into memory
-	SGA_StreamGraph sg = SGA_StreamGraph_from_file("../data/tests/S.sga");
-	SGA_Stream st	   = SGA_FullStreamGraph_from(&sg);
+int main(int argc, char **argv) {
+        const char *path = argc > 1 ? argv[1] : "../data/tests/S.sga";
+        // Load the stream into memory
+        SGA_StreamGraph sg = SGA_StreamGraph_from_file(path);
+        SGA_Stream st      = SGA_FullStreamGraph_from(&sg);
 
-	// Compute the maximal cliques
-	SGA_CliqueArrayList cliques = SGA_Stream_maximal_cliques(&st);
+        // Compute the maximal cliques
+        SGA_CliqueArrayList cliques = SGA_Stream_maximal_cliques(&st);
 
-	// Print the maximal cliques
-	String str = SGA_CliqueArrayList_to_string(&cliques);
-	printf("Maximal cliques: %s\n", str.data);
-	String_destroy(str);
+        // Print the maximal cliques
+        String str = SGA_CliqueArrayList_to_string(&cliques);
+        printf("Maximal cliques: %s\n", str.data);
+        String_destroy(str);
 
-	// Don't forget to release the memory used
-	SGA_CliqueArrayList_destroy(cliques);
+        // Don't forget to release the memory used
+        SGA_CliqueArrayList_destroy(cliques);
 
-	// Cleanup
-	SGA_FullStreamGraph_destroy(st);
-	SGA_StreamGraph_destroy(sg);
-	exit(EXIT_SUCCESS);
+        // Cleanup
+        SGA_FullStreamGraph_destroy(st);
+        SGA_StreamGraph_destroy(sg);
+        exit(EXIT_SUCCESS);
 }
